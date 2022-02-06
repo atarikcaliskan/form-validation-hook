@@ -11,7 +11,7 @@ type FormInputs = {
 };
 
 const schema = Nope.object().shape({
-	email: Nope.string().required('Email is required').email('Email is invalid'),
+	email: Nope.string().email('Email is invalid').required('Email is required'),
 	password: Nope.string().required('Password is required.'),
 });
 
